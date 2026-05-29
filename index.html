@@ -1,0 +1,942 @@
+<!DOCTYPE html>
+<html lang="cs"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Fraunces:wght@400;500;600;700&display=swap" rel="stylesheet">
+<title>CELÁ · Individuální spolupráce s Kateřinou</title>
+<meta name="description" content="CELÁ — tříměsíční individuální spolupráce s Kateřinou. 6 setkání, online, 1:1. Pro ženu, která zkusila všechno… a vrátila se, protože něco uvnitř pořád říká: tohle není ono.">
+
+<!-- Favicon -->
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><circle cx='16' cy='16' r='15' fill='%23a77b00'/><text x='16' y='23' text-anchor='middle' font-family='Georgia,serif' font-size='18' font-style='italic' fill='%23fdfaf3'>j</text></svg>">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="CELÁ · Individuální spolupráce s Kateřinou">
+<meta property="og:description" content="Tříměsíční individuální spolupráce. 6 setkání. 1:1. Pro ženu, která zkusila všechno… a pořád v tom samém kruhu.">
+<meta property="og:image" content="images/katerina-hero.jpg">
+<meta property="og:url" content="https://myheallo.online/cela">
+<meta property="og:locale" content="cs_CZ">
+<meta property="og:site_name" content="HEALLO®">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="CELÁ · Individuální spolupráce s Kateřinou">
+<meta name="twitter:description" content="CELÁ · 3 měsíce · 6 setkání · 1:1 · pro ženu, která zkusila všechno">
+<meta name="twitter:image" content="images/katerina-hero.jpg">
+
+<meta name="theme-color" content="#c2185b">
+
+<!-- Flodesk universal script -->
+<script>
+  (function(w, d, t, h, s, n) {
+    w.FlodeskObject = n;
+    var fn = function() {
+      (w[n].q = w[n].q || []).push(arguments);
+    };
+    w[n] = w[n] || fn;
+    var f = d.getElementsByTagName(t)[0];
+    var v = '?v=' + Math.floor(new Date().getTime() / (120 * 1000)) * 60;
+    var sm = d.createElement(t);
+    sm.async = true;
+    sm.type = 'module';
+    sm.src = h + s + '.mjs' + v;
+    f.parentNode.insertBefore(sm, f);
+    var sn = d.createElement(t);
+    sn.async = true;
+    sn.noModule = true;
+    sn.src = h + s + '.js' + v;
+    f.parentNode.insertBefore(sn, f);
+  })(window, document, 'script', 'https://assets.flodesk.com', '/universal', 'fd');
+</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  /* Primary = sytě růžová (CELÁ signature - ladí s mikinou v about) */
+  --gold:#c2185b;
+  --gold-dark:#8b0e3e;
+  --gold-light:#f8c5d6;
+  --gold-bg:#fdeef2;
+  /* Brand gold (jen pro logo + footer = HEALLO® identita) */
+  --brand-gold:#a77b00;
+  --brand-gold-dark:#8a6500;
+  /* Secondary accent = brand gold pro skutek + bullets (konceptuální návrat k brandu) */
+  --rose:#a77b00;
+  --rose-dark:#8a6500;
+  /* Backgrounds s lehkým růžovým podtónem */
+  --cream:#fdf8f9;
+  --ivory:#ffffff;
+  --warm:#faefee;
+  --sage:#7a8c6e;
+  --ink:#1a1a1a;
+  --ink-soft:#3a3a3a;
+  --ink-mute:#6b6b6b;
+  --star:#f5a623;
+  --line:rgba(0,0,0,.08);
+}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',system-ui,-apple-system,sans-serif;color:var(--ink);line-height:1.6;background:var(--cream);-webkit-font-smoothing:antialiased;font-size:17px}
+img{max-width:100%;height:auto;display:block}
+svg{display:inline-block;vertical-align:middle}
+
+.wrap{max-width:960px;margin:0 auto;padding:80px 24px}
+.wrap-narrow{max-width:680px;margin:0 auto;padding:80px 24px}
+@media(max-width:600px){.wrap,.wrap-narrow{padding:56px 20px}}
+
+h1,h2,h3,h4{font-family:'Inter',sans-serif;font-weight:800;color:var(--ink);letter-spacing:-0.02em;line-height:1.15}
+h1{font-size:clamp(34px,5.5vw,58px);font-weight:900}
+h2{font-size:clamp(28px,4.2vw,42px);margin-bottom:18px;font-weight:800}
+h3{font-size:22px;margin-bottom:10px;font-weight:700}
+h4{font-size:18px;font-weight:700}
+p{margin-bottom:12px;color:var(--ink-soft);font-size:17px;line-height:1.65}
+a{color:var(--gold);text-decoration:none}
+
+.serif{font-family:'Fraunces',Georgia,serif;font-weight:500}
+
+.deco-divider{display:flex;align-items:center;justify-content:center;gap:14px;margin:0 auto 20px;color:var(--gold);max-width:200px}
+.deco-divider::before,.deco-divider::after{content:'';flex:1;height:1px;background:linear-gradient(90deg,transparent,var(--gold-light),transparent)}
+.deco-divider svg{width:24px;height:24px;flex-shrink:0}
+
+/* ANNOUNCEMENT BAR */
+.countdown-bar{background:linear-gradient(90deg,var(--gold) 0%,var(--gold-dark) 100%);color:#fff;text-align:center;padding:14px 20px;font-size:13px;font-weight:700;display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap;position:sticky;top:0;z-index:99;box-shadow:0 2px 8px rgba(0,0,0,.1);letter-spacing:.5px}
+.countdown-bar-label{text-transform:uppercase;letter-spacing:1.5px;font-size:11px;font-weight:800}
+
+/* LOGO */
+.logo-bar{background:var(--ivory);padding:18px 24px;text-align:center;border-bottom:1px solid var(--line)}
+.logo{font-family:'Fraunces',serif;font-weight:500;font-size:26px;letter-spacing:-.015em;color:var(--brand-gold);display:inline-flex;align-items:baseline;gap:6px;line-height:1}
+.logo em{font-style:italic;font-weight:400;color:var(--brand-gold-dark)}
+.logo::before{content:'';display:inline-block;width:5px;height:5px;border-radius:50%;background:var(--brand-gold);align-self:center;margin-right:6px}
+
+/* HERO */
+.hero{background:var(--ivory);text-align:center;padding:60px 24px 80px;position:relative;overflow:hidden}
+.hero-inner{max-width:760px;margin:0 auto;position:relative;z-index:2}
+.hero-deco-left,.hero-deco-right{position:absolute;z-index:1;opacity:.85;filter:drop-shadow(0 4px 12px rgba(167,123,0,.08))}
+.hero-deco-left{top:60px;left:3%;width:200px;height:auto;transform:rotate(-15deg)}
+.hero-deco-right{top:40px;right:3%;width:220px;height:auto;transform:rotate(20deg)}
+@media(max-width:900px){.hero-deco-left,.hero-deco-right{display:none}}
+.hero-tagline{display:inline-block;background:var(--gold-bg);color:var(--gold-dark);font-size:12px;font-weight:800;padding:8px 18px;border-radius:100px;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:24px}
+.hero h1{margin-bottom:18px}
+.hero h1 .highlight{font-family:'Fraunces',serif;font-style:italic;font-weight:500;color:var(--gold)}
+.hero-sub{font-size:20px;color:var(--ink-soft);max-width:600px;margin:0 auto 28px;line-height:1.55;font-weight:500}
+
+/* HERO PHOTO */
+.hero-photo-wrap{position:relative;width:280px;margin:0 auto 36px}
+.hero-photo{aspect-ratio:1;border-radius:50%;background:linear-gradient(135deg,var(--gold-bg),var(--warm));overflow:hidden;border:6px solid #fff;box-shadow:0 20px 60px rgba(167,123,0,.2);display:flex;align-items:center;justify-content:center;flex-direction:column;color:var(--gold);text-align:center;padding:24px;position:relative;z-index:2}
+.photo-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:inherit;z-index:5;background:#fff}
+.photo-brief{font-size:11px;color:var(--gold-dark);font-weight:700;text-transform:uppercase;letter-spacing:1px;margin-bottom:6px}
+.photo-desc{font-size:13px;color:var(--ink-mute);font-weight:500;line-height:1.4;font-family:'Inter',sans-serif}
+.hero-photo-ring{position:absolute;inset:-24px;border:1.5px dashed var(--gold-light);border-radius:50%;z-index:1;animation:rotate-ring 60s linear infinite}
+@keyframes rotate-ring{to{transform:rotate(360deg)}}
+.hero-photo-leaf{position:absolute;color:var(--gold);z-index:3}
+.hero-photo-leaf-1{top:-10px;right:-20px;width:60px;transform:rotate(30deg)}
+.hero-photo-leaf-2{bottom:0;left:-30px;width:50px;transform:rotate(-40deg)}
+
+/* SPOTS CARD (editorial badge) */
+.spots-card{max-width:380px;margin:0 auto 32px;background:#fff;border:2px solid var(--gold);border-radius:20px;padding:28px 32px;text-align:center;box-shadow:0 16px 50px rgba(194,24,91,.15);position:relative;animation:gentle-pulse 3s ease-in-out infinite}
+@keyframes gentle-pulse{0%,100%{box-shadow:0 16px 50px rgba(194,24,91,.15)}50%{box-shadow:0 20px 60px rgba(194,24,91,.32)}}
+.spots-badge-top{font-size:11px;font-weight:800;color:var(--gold);letter-spacing:3px;text-transform:uppercase;margin-bottom:6px;display:block}
+.spots-number{font-family:'Fraunces',serif;font-style:italic;font-size:88px;font-weight:600;color:var(--gold);line-height:1;letter-spacing:-.02em;margin-bottom:0}
+.spots-label{font-size:13px;font-weight:800;color:var(--ink);text-transform:uppercase;letter-spacing:2.5px;margin-bottom:18px;display:block}
+.spots-breakdown{font-size:14px;color:var(--ink-soft);border-top:1px solid var(--gold-light);padding-top:14px;margin:0;line-height:1.7;text-align:left;display:grid;gap:6px}
+.spots-breakdown div{display:flex;align-items:center;gap:10px}
+.spots-breakdown .spot-num{font-family:'Fraunces',serif;font-style:italic;font-size:20px;color:var(--gold);font-weight:600;line-height:1;width:24px;flex-shrink:0;text-align:center}
+.spots-breakdown .spot-text strong{color:var(--ink);font-weight:700;display:block;font-size:14px}
+.spots-breakdown .spot-text span{color:var(--ink-mute);font-size:12px;text-transform:uppercase;letter-spacing:1px;font-weight:600}
+.spots-footer-note{font-size:12px;color:var(--ink-mute);font-style:italic;margin-top:14px;padding-top:14px;border-top:1px dashed var(--gold-light);text-align:center;line-height:1.5}
+.spots-footer-note strong{color:var(--gold-dark);font-style:normal;font-weight:700}
+
+/* BTN */
+.btn{display:inline-block;background:var(--gold);color:#fff;font-size:17px;font-weight:800;padding:18px 38px;border-radius:8px;text-decoration:none;border:none;cursor:pointer;transition:all .2s ease;letter-spacing:.01em;font-family:'Inter',sans-serif;box-shadow:0 4px 14px rgba(167,123,0,.3)}
+.btn:hover{background:var(--gold-dark);transform:translateY(-2px);box-shadow:0 8px 24px rgba(167,123,0,.4)}
+.btn-lg{font-size:18px;padding:20px 48px}
+.btn-rose{background:var(--rose)}
+.btn-rose:hover{background:var(--rose-dark)}
+.btn-link{color:var(--gold);font-size:15px;text-decoration:underline;font-weight:600}
+.micro{font-size:13px;color:var(--ink-mute);margin-top:14px}
+
+/* TRUST BAR */
+.trust-bar{background:var(--ivory);padding:32px 24px;text-align:center;border-top:1px solid var(--line)}
+.trust-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;max-width:760px;margin:0 auto}
+@media(min-width:700px){.trust-grid{grid-template-columns:repeat(4,1fr)}}
+.trust-item{font-size:12px;color:var(--ink-mute);font-weight:500;display:flex;flex-direction:column;align-items:center;gap:6px;letter-spacing:.3px;text-transform:uppercase}
+.trust-item svg{width:28px;height:28px;color:var(--gold);margin-bottom:6px}
+.trust-item strong{display:block;font-size:16px;color:var(--ink);font-weight:700;font-family:'Inter',sans-serif;line-height:1.2;text-transform:none;letter-spacing:-.01em;margin-bottom:2px}
+
+/* SECTION HEADER */
+.section-eyebrow{display:inline-block;background:var(--gold-bg);color:var(--gold-dark);font-size:11px;font-weight:800;padding:6px 14px;border-radius:100px;letter-spacing:2px;text-transform:uppercase;margin-bottom:18px}
+.section-head{text-align:center;max-width:680px;margin:0 auto 48px}
+.section-head h2 .serif-em{font-family:'Fraunces',serif;font-style:italic;font-weight:400;color:var(--gold)}
+
+/* PROBLEM */
+.problem-section{background:var(--cream);text-align:center;position:relative;overflow:hidden}
+.problem-list{max-width:580px;margin:32px auto 0;text-align:left}
+.problem-list li{padding:14px 0;font-size:17px;color:var(--ink-soft);padding-left:40px;position:relative;list-style:none;line-height:1.55;border-bottom:1px solid var(--line)}
+.problem-list li:last-child{border-bottom:none}
+.problem-list li::before{content:'';position:absolute;left:0;top:14px;width:26px;height:26px;background:rgba(217,119,87,.12);border-radius:50%}
+.problem-list li::after{content:'';position:absolute;left:8px;top:24px;width:10px;height:2px;background:var(--rose);border-radius:2px}
+
+/* PILÍŘE */
+.pilar-section{padding:90px 24px;position:relative;overflow:hidden}
+.pilar-section.bg-warm{background:var(--warm)}
+.pilar-section.bg-cream{background:var(--cream)}
+.pilar-section.bg-ivory{background:var(--ivory)}
+.pilar-section .section-head{margin-bottom:36px}
+.pilar-body{max-width:680px;margin:0 auto}
+.pilar-body p{font-size:18px;line-height:1.75;margin-bottom:18px;color:var(--ink-soft)}
+.pilar-body p.lead{font-size:20px;line-height:1.6}
+.pilar-body p strong{color:var(--ink);font-weight:700}
+.pilar-list{list-style:none;padding:24px 28px;margin:28px 0;background:#fff;border-radius:12px;border-left:4px solid var(--gold);box-shadow:0 4px 20px rgba(0,0,0,.04)}
+.pilar-list li{padding:8px 0;font-size:17px;color:var(--ink-soft);line-height:1.55}
+.pilar-list li em{font-family:'Fraunces',serif;font-style:italic;color:var(--gold);font-weight:500;font-size:1.05em}
+.pilar-closing{font-family:'Fraunces',serif;font-style:italic;font-size:22px;color:var(--gold-dark);line-height:1.5;text-align:center;padding:32px 24px 0;margin-top:24px;border-top:1px solid var(--gold-light);font-weight:500}
+.pilar-closing.left{text-align:left}
+
+/* ABOUT */
+.about-section{background:var(--warm);position:relative;overflow:hidden}
+.about-inner{position:relative;z-index:2;max-width:880px;margin:0 auto;display:grid;grid-template-columns:1fr;gap:48px;align-items:center}
+@media(min-width:780px){.about-inner{grid-template-columns:340px 1fr;gap:60px}}
+.about-photo{aspect-ratio:4/5;border-radius:16px;background:linear-gradient(135deg,var(--gold-bg),var(--warm));display:flex;align-items:center;justify-content:center;flex-direction:column;color:var(--gold);text-align:center;padding:32px;border:4px solid #fff;box-shadow:0 16px 50px rgba(167,123,0,.15);position:relative;overflow:hidden}
+.about-content h2{text-align:left}
+.about-content .section-eyebrow{margin-bottom:14px}
+.about-content p{font-size:16px;line-height:1.75;margin-bottom:12px}
+.about-quote{font-family:'Fraunces',serif;font-weight:500;font-size:24px;font-style:italic;color:var(--gold);text-align:center;line-height:1.45;padding:32px 28px;margin:48px auto 0;background:#fff;border-radius:14px;box-shadow:0 4px 20px rgba(0,0,0,.04);max-width:680px;position:relative}
+.quote-mark{font-family:'Fraunces',serif;font-size:80px;color:var(--gold);line-height:0;display:inline-block;vertical-align:-20px;margin-right:4px;opacity:.3;font-style:normal}
+
+/* VIDEO EMBED */
+.video-wrap{max-width:760px;margin:0 auto;position:relative}
+.video-eyebrow{text-align:center;font-size:12px;font-weight:800;color:var(--gold);letter-spacing:2.5px;text-transform:uppercase;margin-bottom:18px}
+.video-bridge{text-align:center;font-size:18px;color:var(--ink-soft);line-height:1.6;max-width:560px;margin:0 auto 24px;font-style:italic;font-family:'Fraunces',serif;font-weight:500}
+.video-player{position:relative;aspect-ratio:16/9;border-radius:16px;overflow:hidden;cursor:pointer;background:#000;box-shadow:0 20px 60px rgba(0,0,0,.2);transition:transform .3s ease}
+.video-player:hover{transform:translateY(-4px);box-shadow:0 24px 70px rgba(0,0,0,.28)}
+.video-player:hover .play-button{transform:translate(-50%,-50%) scale(1.08)}
+.video-player img.video-poster{width:100%;height:100%;object-fit:cover;display:block;transition:opacity .3s}
+.video-player iframe{width:100%;height:100%;border:0;display:block}
+.play-button{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:84px;height:84px;transition:transform .3s ease;filter:drop-shadow(0 6px 16px rgba(0,0,0,.5));pointer-events:none}
+.play-button svg{width:100%;height:100%}
+.video-caption{text-align:center;font-size:14px;color:var(--ink-mute);margin-top:14px;font-style:italic}
+
+/* HOW IT WORKS - PATH */
+.path-section{background:var(--ivory);position:relative;overflow:hidden}
+.path-grid{display:grid;gap:24px;max-width:780px;margin:0 auto}
+@media(min-width:780px){.path-grid{grid-template-columns:repeat(3,1fr);gap:24px}}
+.path-card{background:#fff;border:2px solid var(--line);border-radius:16px;padding:32px 24px;text-align:center;transition:all .25s;position:relative}
+.path-card:hover{border-color:var(--gold);transform:translateY(-4px);box-shadow:0 16px 40px rgba(167,123,0,.1)}
+.path-illustration{width:80px;height:80px;margin:0 auto 18px;background:var(--gold-bg);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--gold)}
+.path-illustration svg{width:44px;height:44px}
+.path-num{position:absolute;top:18px;right:22px;font-family:'Fraunces',serif;font-style:italic;font-size:26px;color:var(--gold);font-weight:500;opacity:.45;line-height:1}
+.path-card h3{font-size:18px;margin-bottom:10px}
+.path-card .month-tag{font-size:11px;font-weight:800;color:var(--gold);text-transform:uppercase;letter-spacing:1.5px;margin-bottom:6px;display:block}
+.path-card p{font-size:14px;color:var(--ink-soft);margin:0;line-height:1.65}
+
+/* REFERENCE */
+.ref-section{background:var(--warm);padding:80px 24px}
+.ref-grid{display:grid;gap:24px;max-width:760px;margin:0 auto;grid-template-columns:1fr}
+@media(min-width:700px){.ref-grid{grid-template-columns:1fr 1fr}}
+.ref-card{background:#fff;border-radius:16px;padding:32px;box-shadow:0 4px 20px rgba(0,0,0,.04);position:relative;display:flex;flex-direction:column;gap:14px}
+.ref-header{display:flex;align-items:center;gap:14px;margin-bottom:6px}
+.ref-avatar{width:48px;height:48px;border-radius:50%;background:linear-gradient(135deg,var(--gold-bg),var(--warm));display:flex;align-items:center;justify-content:center;color:var(--gold);font-weight:800;font-size:18px;font-family:'Fraunces',serif;flex-shrink:0;border:2px solid #fff;box-shadow:0 2px 8px rgba(0,0,0,.06)}
+.ref-name{font-weight:700;color:var(--ink);font-size:15px;line-height:1.2}
+.ref-name .anon{font-size:11px;color:var(--ink-mute);font-weight:500;display:block;margin-top:2px;text-transform:uppercase;letter-spacing:1px}
+.ref-card .stars{font-size:14px;color:var(--star)}
+.ref-card .ref-story{font-size:14px;color:var(--ink-soft);margin:0;line-height:1.7}
+.ref-card .ref-quote{font-family:'Fraunces',serif;font-size:18px;font-style:italic;color:var(--ink);line-height:1.5;padding:18px 20px;background:var(--gold-bg);border-radius:10px;border-left:3px solid var(--gold);font-weight:500;position:relative}
+
+/* PRICING */
+.pricing-section{background:linear-gradient(180deg,var(--gold-bg) 0%,var(--cream) 100%);text-align:center;padding:80px 24px;position:relative;overflow:hidden}
+.pricing-inner{max-width:560px;margin:0 auto;position:relative;z-index:2}
+.pricing-card{background:#fff;border-radius:22px;padding:48px 36px;margin:40px 0 32px;box-shadow:0 20px 60px rgba(167,123,0,.15);border:3px solid var(--gold);position:relative;overflow:visible}
+.pricing-card .price-now{font-size:88px;font-weight:900;color:var(--gold);line-height:1;letter-spacing:-0.03em;margin:6px 0;font-family:'Inter',sans-serif}
+.pricing-card .price-label{font-size:14px;color:var(--ink-mute);letter-spacing:1px;text-transform:uppercase;font-weight:700;margin-bottom:24px}
+.pricing-card .save-badge{display:inline-block;background:var(--rose);color:#fff;font-size:12px;font-weight:800;padding:6px 14px;border-radius:100px;letter-spacing:1px;text-transform:uppercase;margin-bottom:8px}
+.pricing-card .price-note{font-size:13px;color:var(--ink-mute);margin-top:18px;font-style:italic}
+
+/* GUARANTEE */
+.guarantee{background:#fff;border:2px solid var(--gold-light);border-radius:14px;padding:36px;text-align:center;max-width:560px;margin:40px auto 0;display:flex;flex-direction:column;align-items:center;gap:16px}
+.guarantee-shield{width:90px;height:100px;display:flex;align-items:center;justify-content:center}
+.guarantee h3{font-size:20px;margin:0}
+.guarantee p{font-size:15px;color:var(--ink-soft);margin:0;line-height:1.6;max-width:420px}
+
+/* APPLY SECTION */
+.apply-section{background:var(--ivory);padding:80px 24px}
+.apply-inner{max-width:680px;margin:0 auto;text-align:center}
+.apply-card{background:linear-gradient(135deg,#fff,var(--gold-bg));border:2px solid var(--gold-light);border-radius:16px;padding:40px 32px;margin-top:32px;text-align:left}
+.apply-card h3{font-size:22px;color:var(--ink);margin-bottom:16px;font-weight:800}
+.apply-card p{font-size:16px;color:var(--ink-soft);line-height:1.7;margin-bottom:14px}
+.apply-card .apply-email{display:inline-block;background:var(--ink);color:#fff;padding:14px 24px;border-radius:8px;font-weight:700;font-size:16px;text-decoration:none;margin-top:14px;letter-spacing:.3px;transition:all .2s}
+.apply-card .apply-email:hover{background:var(--gold);transform:translateY(-2px)}
+
+/* SKUTEK SECTION */
+.skutek-section{background:var(--warm);padding:80px 24px;position:relative;overflow:hidden}
+.skutek-inner{max-width:680px;margin:0 auto;text-align:center;position:relative;z-index:2}
+.skutek-card{background:#fff;border:2px dashed var(--gold);border-radius:18px;padding:40px 32px;margin-top:32px;text-align:left;position:relative}
+.skutek-card::before{content:'⚘';position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:var(--warm);color:var(--gold);font-size:24px;padding:0 14px;line-height:1}
+.skutek-card .skutek-eyebrow{font-size:11px;font-weight:800;color:var(--rose);letter-spacing:2px;text-transform:uppercase;margin-bottom:12px;display:block}
+.skutek-card h3{font-size:22px;color:var(--ink);margin-bottom:16px;font-weight:800}
+.skutek-card p{font-size:16px;color:var(--ink-soft);line-height:1.7;margin-bottom:14px}
+.skutek-card .skutek-email{display:inline-block;background:var(--rose);color:#fff;padding:14px 24px;border-radius:8px;font-weight:700;font-size:16px;text-decoration:none;margin-top:14px;letter-spacing:.3px;transition:all .2s}
+.skutek-card .skutek-email:hover{background:var(--rose-dark);transform:translateY(-2px)}
+.skutek-grid{display:grid;grid-template-columns:1fr;gap:20px;margin-top:32px;text-align:left}
+@media(min-width:700px){.skutek-grid{grid-template-columns:1fr 1fr;gap:24px}}
+.skutek-grid .skutek-card{padding:32px 28px;margin-top:0;display:flex;flex-direction:column}
+.skutek-grid .skutek-card h3{font-size:20px}
+.skutek-grid .skutek-card p{font-size:15px}
+.skutek-grid .skutek-card .skutek-email{margin-top:auto;align-self:flex-start}
+
+/* NEWSLETTER */
+.newsletter-section{background:linear-gradient(180deg,var(--cream) 0%,var(--gold-bg) 100%);padding:90px 24px;position:relative;overflow:hidden}
+.newsletter-inner{max-width:620px;margin:0 auto;text-align:center;position:relative;z-index:2}
+.newsletter-inner h2{margin-bottom:18px}
+.newsletter-lead{font-size:17px;color:var(--ink-soft);line-height:1.7;max-width:540px;margin:0 auto 40px}
+.newsletter-section::before{content:'';position:absolute;top:-100px;left:-100px;width:300px;height:300px;background:radial-gradient(circle,rgba(194,24,91,.08),transparent 70%);border-radius:50%;z-index:1}
+.newsletter-section::after{content:'';position:absolute;bottom:-100px;right:-100px;width:300px;height:300px;background:radial-gradient(circle,rgba(167,123,0,.08),transparent 70%);border-radius:50%;z-index:1}
+#fd-form-6a196070d87a9ffadce51dae{max-width:520px;margin:0 auto;background:#fff;border-radius:16px;padding:8px;box-shadow:0 16px 50px rgba(194,24,91,.12);position:relative;z-index:2}
+@media(max-width:600px){
+  .newsletter-section{padding:60px 20px}
+  .newsletter-lead{font-size:16px;margin-bottom:32px}
+}
+
+/* FAQ */
+.faq-section{background:var(--ivory)}
+.faq-container{max-width:680px;margin:0 auto}
+.faq-item{background:#fff;border:2px solid var(--line);border-radius:12px;margin-bottom:12px;transition:border-color .25s}
+.faq-item[open]{border-color:var(--gold)}
+.faq-item summary{font-weight:700;font-size:17px;color:var(--ink);cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;padding:22px 26px;user-select:none;gap:16px}
+.faq-item summary::after{content:'+';font-size:24px;color:var(--gold);font-weight:600;transition:transform .25s ease;flex-shrink:0;width:32px;height:32px;border-radius:50%;background:var(--gold-bg);display:flex;align-items:center;justify-content:center;line-height:1}
+.faq-item[open] summary::after{transform:rotate(45deg);background:var(--gold);color:#fff}
+.faq-item p{font-size:15px;color:var(--ink-soft);padding:0 26px 24px;line-height:1.7}
+
+/* ALTERNATIVES */
+.alt-section{background:var(--warm);padding:80px 24px;border-top:1px solid var(--line)}
+.alt-grid{display:grid;grid-template-columns:1fr;gap:20px;max-width:980px;margin:32px auto 0}
+@media(min-width:780px){.alt-grid{grid-template-columns:repeat(3,1fr);gap:24px}}
+.alt-card{background:#fff;border:2px solid var(--line);border-radius:16px;padding:32px 28px;text-decoration:none;color:inherit;transition:all .25s;display:flex;flex-direction:column;gap:14px;position:relative;overflow:hidden}
+.alt-card:hover{border-color:var(--gold);transform:translateY(-4px);box-shadow:0 16px 40px rgba(194,24,91,.1)}
+.alt-card:hover .alt-arrow{transform:translate(4px,-4px)}
+.alt-tag{display:inline-block;background:var(--gold-bg);color:var(--gold-dark);font-size:11px;font-weight:800;padding:5px 12px;border-radius:100px;letter-spacing:1.5px;text-transform:uppercase;align-self:flex-start}
+.alt-card h3{font-size:24px;margin:0;font-family:'Fraunces',serif;font-weight:600;font-style:italic;color:var(--ink);line-height:1.2}
+.alt-card p{font-size:14px;color:var(--ink-soft);margin:0;line-height:1.65;flex:1}
+.alt-meta{font-size:12px;color:var(--ink-mute);font-weight:700;letter-spacing:.5px;border-top:1px solid var(--line);padding-top:14px;margin-top:6px;text-transform:uppercase}
+.alt-arrow{position:absolute;top:28px;right:28px;color:var(--gold);font-size:24px;font-weight:700;transition:transform .25s ease;line-height:1}
+
+/* FINAL CTA */
+.final-cta{background:linear-gradient(135deg,var(--gold) 0%,var(--gold-dark) 100%);color:#fff;text-align:center;padding:90px 24px;position:relative;overflow:hidden}
+.final-cta::before{content:'';position:absolute;top:-50%;right:-10%;width:50%;height:200%;background:radial-gradient(circle,rgba(255,255,255,.1),transparent 60%);pointer-events:none}
+.final-cta > div{position:relative;z-index:2}
+.final-cta h2{color:#fff;max-width:640px;margin:0 auto 18px}
+.final-cta .lead{font-size:18px;color:rgba(255,255,255,.92);max-width:540px;margin:0 auto 32px}
+.final-cta .btn{background:#fff;color:var(--gold);box-shadow:0 8px 24px rgba(0,0,0,.15)}
+.final-cta .btn:hover{background:var(--ink);color:#fff}
+.final-cta .micro{color:rgba(255,255,255,.7)}
+.final-cta .section-eyebrow{background:rgba(255,255,255,.2);color:#fff}
+
+/* STICKY */
+.cookie-banner{position:fixed;bottom:24px;left:24px;right:24px;background:#fff;border:1px solid var(--line);border-radius:14px;padding:18px 22px;display:flex;flex-direction:column;gap:14px;z-index:99;box-shadow:0 16px 40px rgba(0,0,0,.12);max-width:520px;margin:0 auto;font-size:13px;color:var(--ink-soft);line-height:1.5;animation:slide-up .4s cubic-bezier(.2,.8,.2,1) .6s both}
+@media(min-width:600px){.cookie-banner{flex-direction:row;align-items:center;gap:18px}}
+@keyframes slide-up{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+.cookie-banner p{margin:0;font-size:13px;color:var(--ink-soft);flex:1}
+.cookie-banner a{color:var(--gold);text-decoration:underline;text-underline-offset:2px}
+.cookie-accept{background:var(--gold);color:#fff;border:none;padding:10px 22px;border-radius:8px;font-size:13px;font-weight:700;cursor:pointer;font-family:'Inter',sans-serif;white-space:nowrap;transition:background .2s}
+.cookie-accept:hover{background:var(--gold-dark)}
+.cookie-banner.hidden{display:none}
+.sticky-cta{position:fixed;bottom:0;left:0;right:0;background:#fff;padding:14px 20px;display:flex;align-items:center;justify-content:center;gap:18px;z-index:98;box-shadow:0 -4px 24px rgba(0,0,0,.1);transform:translateY(100%);transition:transform .35s ease;border-top:1px solid var(--line)}
+.sticky-cta.visible{transform:translateY(0)}
+.sticky-cta-text{color:var(--ink);font-size:14px;font-weight:700;display:none}
+.sticky-cta .btn{padding:11px 24px;font-size:14px;box-shadow:none}
+@media(min-width:700px){.sticky-cta-text{display:block}}
+
+.footer-pro{background:var(--ivory);border-top:1px solid var(--line);padding:56px 24px 24px}
+.footer-inner{max-width:880px;margin:0 auto;display:grid;grid-template-columns:1fr;gap:36px;padding-bottom:36px;border-bottom:1px solid var(--line)}
+@media(min-width:600px){.footer-inner{grid-template-columns:1.4fr 1fr 1fr 1fr;gap:48px}}
+.footer-col p.footer-brand{font-family:'Fraunces',serif;font-size:24px;font-weight:500;color:var(--brand-gold);letter-spacing:-.015em;margin-bottom:6px;line-height:1}
+.footer-col p.footer-brand em{font-style:italic;font-weight:400;color:var(--brand-gold-dark)}
+.footer-col p.footer-tagline{font-size:13px;color:var(--ink-mute);margin:0;line-height:1.5}
+.footer-col .footer-label{font-size:11px;font-weight:700;color:var(--ink);letter-spacing:1.8px;text-transform:uppercase;margin-bottom:14px;margin-top:0}
+.footer-col a{display:block;font-size:14px;color:var(--ink-soft);text-decoration:none;padding:5px 0;transition:color .2s;line-height:1.4}
+.footer-col a:hover{color:var(--gold)}
+.footer-bottom{max-width:880px;margin:0 auto;padding-top:24px;display:flex;flex-direction:column;gap:8px;align-items:center;font-size:12px;color:var(--ink-mute);text-align:center;line-height:1.6}
+@media(min-width:600px){.footer-bottom{flex-direction:row;justify-content:space-between;text-align:left}}
+.footer-bottom p{margin:0;font-size:12px;color:var(--ink-mute)}
+.footer-bottom .footer-legal{display:flex;gap:18px;flex-wrap:wrap;justify-content:center}
+.footer-bottom .footer-legal a{color:var(--ink-mute);text-decoration:underline;text-underline-offset:3px}
+.footer-bottom .footer-legal a:hover{color:var(--gold)}
+
+@media(max-width:600px){
+  body{font-size:16px}
+  .hero{padding:40px 20px 60px}
+  .hero-photo-wrap{width:240px}
+  .countdown-bar{padding:10px 16px;font-size:12px;flex-direction:column;gap:8px}
+  .pricing-card{padding:36px 24px}
+  .pricing-card .price-now{font-size:68px}
+  .final-cta{padding:60px 20px}
+  .btn{padding:16px 28px;font-size:15px;width:100%;text-align:center;display:block}
+  .btn-lg{font-size:16px;padding:18px 32px}
+  .ref-card,.path-card,.apply-card,.skutek-card{padding:24px}
+  .about-photo{aspect-ratio:1;max-width:280px;margin:0 auto}
+}
+</style></head><body>
+
+<!-- SVG SYMBOLS -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-olive" viewBox="0 0 100 60">
+      <path d="M5 30 Q50 28 95 30" stroke="currentColor" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+      <g fill="currentColor" opacity=".7">
+        <ellipse cx="22" cy="22" rx="6" ry="3.5" transform="rotate(-30 22 22)"/>
+        <ellipse cx="22" cy="38" rx="6" ry="3.5" transform="rotate(30 22 38)"/>
+        <ellipse cx="42" cy="20" rx="6" ry="3.5" transform="rotate(-30 42 20)"/>
+        <ellipse cx="42" cy="40" rx="6" ry="3.5" transform="rotate(30 42 40)"/>
+        <ellipse cx="62" cy="22" rx="6" ry="3.5" transform="rotate(-30 62 22)"/>
+        <ellipse cx="62" cy="38" rx="6" ry="3.5" transform="rotate(30 62 38)"/>
+        <ellipse cx="82" cy="24" rx="6" ry="3.5" transform="rotate(-30 82 24)"/>
+        <ellipse cx="82" cy="36" rx="6" ry="3.5" transform="rotate(30 82 36)"/>
+      </g>
+    </symbol>
+    <symbol id="i-bowl" viewBox="0 0 60 60">
+      <path d="M8 26 Q8 46 30 46 Q52 46 52 26 Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+      <line x1="6" y1="26" x2="54" y2="26" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+      <path d="M22 20 Q26 14 30 16 Q34 14 38 20" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" opacity=".5"/>
+    </symbol>
+    <symbol id="i-heart" viewBox="0 0 60 60">
+      <path d="M30 50 C30 50 12 38 12 24 C12 16 18 12 24 12 C28 12 30 14 30 18 C30 14 32 12 36 12 C42 12 48 16 48 24 C48 38 30 50 30 50 Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="i-calendar" viewBox="0 0 60 60">
+      <rect x="10" y="14" width="40" height="38" rx="3" fill="none" stroke="currentColor" stroke-width="1.8"/>
+      <line x1="10" y1="24" x2="50" y2="24" stroke="currentColor" stroke-width="1.8"/>
+      <line x1="20" y1="8" x2="20" y2="18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+      <line x1="40" y1="8" x2="40" y2="18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+      <circle cx="30" cy="36" r="3" fill="currentColor"/>
+    </symbol>
+    <symbol id="i-people" viewBox="0 0 60 60">
+      <circle cx="20" cy="22" r="6" fill="none" stroke="currentColor" stroke-width="1.8"/>
+      <circle cx="40" cy="22" r="6" fill="none" stroke="currentColor" stroke-width="1.8"/>
+      <path d="M10 46 Q10 34 20 34 Q30 34 30 46" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+      <path d="M30 46 Q30 34 40 34 Q50 34 50 46" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="i-seed" viewBox="0 0 60 60">
+      <ellipse cx="30" cy="42" rx="10" ry="6" fill="currentColor" opacity=".2"/>
+      <path d="M30 42 Q30 30 30 24" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" fill="none"/>
+      <path d="M30 32 Q22 26 22 20 Q22 18 24 18 Q30 18 30 28" stroke="currentColor" stroke-width="1.5" fill="currentColor" fill-opacity=".15" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="i-tree" viewBox="0 0 60 60">
+      <ellipse cx="30" cy="52" rx="16" ry="3" fill="currentColor" opacity=".15"/>
+      <line x1="30" y1="52" x2="30" y2="32" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      <circle cx="30" cy="22" r="14" fill="currentColor" fill-opacity=".2" stroke="currentColor" stroke-width="1.5"/>
+    </symbol>
+    <symbol id="i-bulb" viewBox="0 0 60 60">
+      <path d="M30 10 C22 10 16 16 16 24 C16 30 20 34 22 38 L22 42 L38 42 L38 38 C40 34 44 30 44 24 C44 16 38 10 30 10 Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+      <line x1="22" y1="46" x2="38" y2="46" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="i-spoon" viewBox="0 0 60 60">
+      <ellipse cx="30" cy="18" rx="10" ry="14" fill="none" stroke="currentColor" stroke-width="1.8"/>
+      <line x1="30" y1="32" x2="30" y2="54" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+    </symbol>
+  </defs>
+</svg>
+
+<!-- ANNOUNCEMENT BAR -->
+<div class="countdown-bar">
+  <span class="countdown-bar-label">✦ Kohorta září 2026 · max 5 žen · 3 placená místa + 2 zdarma · registrace v červnu 2026</span>
+</div>
+
+<!-- LOGO BAR -->
+<div class="logo-bar">
+  <span class="logo">HEALLO<em>®</em></span>
+</div>
+
+<!-- COOKIE BANNER -->
+<div class="cookie-banner" id="cookieBanner">
+  <p>Tato stránka používá nezbytné cookies pro správné fungování. <a href="https://www.myheallo.online/ochrana-osobnich-udaju/" target="_blank" rel="noopener">Více informací</a></p>
+  <button class="cookie-accept" onclick="acceptCookies()">Rozumím</button>
+</div>
+
+<!-- STICKY CTA -->
+<div class="sticky-cta" id="stickyBar">
+  <span class="sticky-cta-text">CELÁ · individuální spolupráce · 18 000 Kč</span>
+  <a href="#prihlaseni" class="btn">Napsat příběh →</a>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-tagline">CELÁ · Individuální spolupráce</div>
+    <h1>Zkusila jsi všechno. <span class="highlight">A přesto jsi tady.</span></h1>
+    <p class="hero-sub">Tříměsíční individuální spolupráce. Šest setkání. Žádný jídelníček, žádný plán, žádný návod… jen rozhovor, který jde do hloubky. Se ženou, která tomu rozumí zevnitř.</p>
+    <div class="hero-photo-wrap">
+      <div class="hero-photo-ring"></div>
+      <svg class="hero-photo-leaf hero-photo-leaf-1" viewBox="0 0 100 60"><use href="#i-olive"/></svg>
+      <svg class="hero-photo-leaf hero-photo-leaf-2" viewBox="0 0 100 60"><use href="#i-olive"/></svg>
+      <div class="hero-photo">
+        <img src="images/katerina-hero.jpg" alt="Kateřina" class="photo-img" onerror="this.style.display='none'">
+        <span class="photo-brief">📸 Sem patří fotka Kateřiny</span>
+        <span class="photo-desc">Portrét, přirozené světlo,<br>krémové/zlaté tóny</span>
+      </div>
+    </div>
+    <div class="spots-card">
+      <span class="spots-badge-top">✦ Nová kohorta · start září 2026</span>
+      <div class="spots-number">2</div>
+      <span class="spots-label">místa zdarma</span>
+      <div class="spots-breakdown">
+        <div>
+          <span class="spot-num">1</span>
+          <span class="spot-text">
+            <strong>Roční stipendium</strong>
+            <span>jednou ročně · evergreen</span>
+          </span>
+        </div>
+        <div>
+          <span class="spot-num">1</span>
+          <span class="spot-text">
+            <strong>No-buy skutek</strong>
+            <span>jen v červnu · bonus</span>
+          </span>
+        </div>
+      </div>
+      <p class="spots-footer-note">+ <strong>3 placená místa</strong> v kohortě · registrace od června 2026</p>
+    </div>
+
+    <a href="#prihlaseni" class="btn btn-lg">Napiš mi svůj příběh →</a>
+    <p class="micro">✓ Start září 2026 · ✓ 1:1 online · ✓ 6 setkání za 3 měsíce</p>
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<div class="trust-bar">
+  <div class="trust-grid">
+    <div class="trust-item">
+      <svg viewBox="0 0 60 60"><use href="#i-calendar"/></svg>
+      <strong>3 měsíce</strong>
+      6 setkání po 50 min
+    </div>
+    <div class="trust-item">
+      <svg viewBox="0 0 60 60"><use href="#i-people"/></svg>
+      <strong>1:1 online</strong>
+      Jen ty a já
+    </div>
+    <div class="trust-item">
+      <svg viewBox="0 0 60 60"><use href="#i-heart"/></svg>
+      <strong>Bez plánu</strong>
+      Tělo jako autorita
+    </div>
+    <div class="trust-item">
+      <svg viewBox="0 0 60 60"><use href="#i-bowl"/></svg>
+      <strong>Max 5 žen</strong>
+      3 placená + 2 zdarma
+    </div>
+  </div>
+</div>
+
+<!-- PROBLEM -->
+<section class="problem-section">
+  <div class="wrap-narrow">
+    <div class="section-head">
+      <span class="section-eyebrow">Možná to znáš</span>
+      <h2>Zkusila jsi všechno.<br>A pořád jsi v tom <span class="serif-em">stejném kruhu</span>.</h2>
+      <p style="font-size:18px;margin-top:14px">Jídelníčky, aplikace, „zdravý životní styl," detoxy, intuitivní stravování podle něčího návodu… Možná ti to chvíli fungovalo. Možná vůbec ne. Ale tady jsi… pořád s tím stejným pocitem, že s tebou něco není v pořádku.</p>
+    </div>
+    <ul class="problem-list">
+      <li>Když si v restauraci objednáš dezert, polovinu večera počítáš, co s tím uděláš zítra.</li>
+      <li>Vážíš se každé ráno a podle čísla na váze víš, jaký bude den. Nebo se nevážíš a vyhýbáš se zrcadlu.</li>
+      <li>Občas to chvíli zabralo. Pak zase ne.</li>
+      <li>Už ani pořádně nevíš, co znamená „mít hlad".</li>
+      <li>A někde uvnitř víš, že tohle už dávno není o jídle.</li>
+    </ul>
+    <p style="font-family:'Fraunces',serif;font-style:italic;font-size:24px;color:var(--gold-dark);text-align:center;line-height:1.5;margin-top:40px;font-weight:600">Není.</p>
+    <p style="font-size:16px;color:var(--ink-mute);text-align:center;margin-top:6px">S tebou není nic v pořádku, protože nikdy nebylo. Ten problém je jinde.</p>
+  </div>
+</section>
+
+<!-- REFRAME -->
+<section class="pilar-section bg-warm">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="deco-divider"><svg viewBox="0 0 100 60"><use href="#i-olive"/></svg></div>
+      <span class="section-eyebrow">Jiná otázka</span>
+      <h2>Co kdybychom se přestaly ptát co jíš…<br>a začaly se ptát <span class="serif-em">proč</span>?</h2>
+    </div>
+    <div class="pilar-body">
+      <p class="lead">Tělo není problém, který se řeší. Je to hlas, který čeká, až ho začneš poslouchat.</p>
+      <p>A ten hlas se nenaučíš slyšet z knihy, z kurzu ani z aplikace. Naučíš se ho slyšet <strong>v tichu</strong>, <strong>v bezpečí</strong>, <strong>v rozhovoru, který jde do hloubky</strong>.</p>
+      <p class="pilar-closing">To je práce, kterou děláme spolu.</p>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="path-section">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="section-eyebrow">Jak spolupráce vypadá</span>
+      <h2>Nepřijdeš s jídelníčkem.<br>Přijdeš <span class="serif-em">se sebou</span>.</h2>
+      <p style="font-size:17px;margin-top:14px;max-width:560px;margin-left:auto;margin-right:auto">Setkáváme se jednou za čtrnáct dní na 50 minut přes <strong>Zoom nebo Google Meet</strong> — podle toho, co ti vyhovuje. Celkem šest setkání… tři měsíce, které mohou změnit víc než tři roky hledání na internetu.</p>
+      <p style="font-size:15px;color:var(--ink-mute);margin-top:20px;max-width:540px;margin-left:auto;margin-right:auto;font-style:italic;line-height:1.65">…a pokud chceš pracovat i s jídelníčkem nebo jeho optimalizací, můžeme. Co konkrétně budeme řešit, vyjasníme spolu v <strong style="color:var(--gold-dark);font-style:normal">úvodním seznamovacím hovoru</strong> před začátkem spolupráce.</p>
+    </div>
+
+    <div class="path-grid">
+      <div class="path-card">
+        <span class="path-num">01</span>
+        <div class="path-illustration"><svg viewBox="0 0 60 60"><use href="#i-heart"/></svg></div>
+        <span class="month-tag">Co se děje v těle</span>
+        <h3>Tělo, ne plán</h3>
+        <p>Pracujeme s tím, co se děje v těle. S napětím, s impulzy, s tichem, které předchází přejídání. Tělo umí mluvit… když dostane prostor.</p>
+      </div>
+      <div class="path-card">
+        <span class="path-num">02</span>
+        <div class="path-illustration"><svg viewBox="0 0 60 60"><use href="#i-bowl"/></svg></div>
+        <span class="month-tag">Co tě k jídlu vede</span>
+        <h3>Emoce kolem jídla</h3>
+        <p>Hlad, strach, kontrola, úleva, vina… všechno, co se s jídlem proplétá. Bez moralizování, bez tabulek dobrých a zlých potravin.</p>
+      </div>
+      <div class="path-card">
+        <span class="path-num">03</span>
+        <div class="path-illustration"><svg viewBox="0 0 60 60"><use href="#i-tree"/></svg></div>
+        <span class="month-tag">Kořeny</span>
+        <h3>Vzorce, které vznikly dávno</h3>
+        <p>Vzorce, které vznikly dávno před tím, než jsi začala řešit, co jíš. Někdy v dětství. Někdy ve vztahu. Někdy v rodinné historii, kterou jsi nikdy nepojmenovala.</p>
+      </div>
+    </div>
+
+    <!-- Between-sessions box -->
+    <div style="max-width:680px;margin:48px auto 0;background:linear-gradient(135deg,#fff,var(--gold-bg));border:2px solid var(--gold-light);border-radius:16px;padding:32px 36px;display:grid;grid-template-columns:auto 1fr;gap:24px;align-items:center;box-shadow:0 8px 28px rgba(194,24,91,.08)">
+      <div style="width:64px;height:64px;background:var(--gold);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0">
+        <svg viewBox="0 0 60 60" style="width:32px;height:32px"><use href="#i-bulb"/></svg>
+      </div>
+      <div>
+        <strong style="display:block;font-size:12px;color:var(--gold);font-weight:800;text-transform:uppercase;letter-spacing:1.8px;margin-bottom:8px">Mezi setkáními</strong>
+        <h4 style="font-size:18px;margin-bottom:8px">Aby se těch 14 dní nestrávilo tichem.</h4>
+        <p style="font-size:15px;color:var(--ink-soft);margin:0;line-height:1.65">Mezi setkáními ti posílám <strong>materiály</strong> — krátké texty, otázky k psaní deníku, somatické praxe. A pokud se mezi tím něco děje, <strong>jsem dosažitelná přes WhatsApp a email</strong>. Nejsi na to sama.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<style>
+@media(max-width:600px){
+  section.path-section > .wrap > div[style*="grid-template-columns:auto 1fr"]{grid-template-columns:1fr !important;text-align:center;padding:28px 24px !important}
+  section.path-section > .wrap > div[style*="grid-template-columns:auto 1fr"] > div:first-child{margin:0 auto}
+}
+</style>
+
+<!-- ABOUT KATEŘINA + VIDEO -->
+<section class="about-section">
+  <div class="wrap">
+    <div class="about-inner">
+      <div class="about-photo">
+        <img src="images/katerina-about.jpg" alt="Kateřina" class="photo-img" onerror="this.style.display='none'">
+        <span class="photo-brief">📸 Sem patří fotka Kateřiny</span>
+        <span class="photo-desc">V autentickém prostředí… u stolu, u okna, v kuchyni.<br><br>Formát 4:5,<br>přirozené světlo</span>
+      </div>
+      <div class="about-content">
+        <span class="section-eyebrow">Kdo bude na druhé straně obrazovky</span>
+        <h2>Nesedíš naproti někomu,<br>kdo to <span class="serif-em">vyřešil</span>.</h2>
+        <p>Jsem Kateřina.</p>
+        <p>Stojím při tobě, abys došla tam, kam ses rozhodla. Ne abych tě tlačila. Ne abych ti dávala plán. Ale abych ti připomněla, proč jsi do toho šla… a držela prostor i ve dnech, kdy bys chtěla utéct.</p>
+        <p>Studovala jsem <strong>health coaching a výživu</strong> tady i v zahraničí. Prošla jsem <strong>výcvikem v NLP</strong> (práce s myslí a se vzorci, které řídí naše rozhodování). Aktuálně jsem ve <strong>výcvicích v somatice, psychologii jídla, intuitivním stravování i psychoterapii</strong>.</p>
+        <p>Sama jsem byla klientkou <strong>Markéty Gajdošové</strong>. Tehdy jsem řešila svůj vlastní vztah k jídlu… a z té spolupráce mi zůstalo víc než odpovědi. Zůstal mi i směr, kam jít dál ve svém vzdělávání. Část toho, kdo dnes jsem, vznikla i tam.</p>
+        <p>Ale to všechno jsou jen nástroje. Ten hlavní důvod, proč mi ženy věří, je ten… že jsem tím prošla taky. A pořád procházím. <strong>Sedíš naproti ženě, která tomu rozumí zevnitř.</strong></p>
+      </div>
+    </div>
+
+    <div class="video-wrap" style="margin-top:80px">
+      <div class="video-eyebrow">Než mi napíšeš svůj příběh</div>
+      <p class="video-bridge">… nech se vést hudbou a slovy. Tady běží příběh HEALLO®. Proč vznikl. Proč tuhle cestu otevírám zrovna teď a zrovna tobě.</p>
+      <div class="video-player" data-video-id="-RoQ2SCDnKQ" onclick="loadVideo(this)">
+        <img class="video-poster" src="https://i.ytimg.com/vi/-RoQ2SCDnKQ/maxresdefault.jpg" alt="Kateřina o přejídání" loading="lazy" onerror="this.src='https://i.ytimg.com/vi/-RoQ2SCDnKQ/hqdefault.jpg'">
+        <div class="play-button">
+          <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="40" cy="40" r="38" fill="rgba(255,255,255,.96)"/>
+            <path d="M33 26 L57 40 L33 54 Z" fill="#a77b00"/>
+          </svg>
+        </div>
+      </div>
+      <p class="video-caption">Pokud ti rezonuje tenhle prostor… nejspíš ti bude rezonovat i spolupráce.</p>
+    </div>
+  </div>
+</section>
+
+<!-- REFERENCE -->
+<section class="ref-section">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="section-eyebrow">Co o spolupráci říkají ženy</span>
+      <h2>Ne čísla.<br>Něco <span class="serif-em">jiného</span>.</h2>
+    </div>
+    <div class="ref-grid">
+      <div class="ref-card">
+        <div class="ref-header">
+          <div class="ref-avatar">P</div>
+          <div>
+            <div class="ref-name">Pavlína<span class="anon">klientka</span></div>
+            <div class="stars">★★★★★</div>
+          </div>
+        </div>
+        <p class="ref-quote">Po rozhovoru s Kateřinou bych dokázala rozestoupit řeku.</p>
+        <p class="ref-story">Tak mi to napsala Pavlína po jednom z našich setkání. A přesně tohle je to, na čem pracujeme. Ne abys něco dokázala mně. Abys to dokázala sobě.</p>
+      </div>
+      <div class="ref-card">
+        <div class="ref-header">
+          <div class="ref-avatar">M</div>
+          <div>
+            <div class="ref-name">Moje mentorka<span class="anon">slova, která mě drží</span></div>
+            <div class="stars">★★★★★</div>
+          </div>
+        </div>
+        <p class="ref-quote">Kateřino, ty jsi roznašečka naděje.</p>
+        <p class="ref-story">Tahle věta sedí v mém srdci jako kotva. Když ke mně přijde žena unavená ze všeho, co zkoušela… nepřináším jí další plán. Přináším jí naději, že to jde i jinak. Že to jde s ní samotnou.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="pricing-section" id="cena">
+  <div class="pricing-inner">
+    <span class="section-eyebrow">Investice</span>
+    <h2>18 000 Kč<br>za <span class="serif-em">celou cestu</span>.</h2>
+    <p style="font-size:17px;margin-top:12px">Šest setkání. Tři měsíce. Plný přístup ke mně mezi setkáními přes WhatsApp a email.</p>
+
+    <div class="pricing-card">
+      <span class="save-badge">CELÁ · individuální spolupráce</span>
+      <p class="price-now">18 000 Kč</p>
+      <p class="price-label">6 setkání · 3 měsíce · 1:1</p>
+      <p style="font-size:15px;color:var(--ink-soft);margin:8px 0 24px">nebo <strong>3 splátky po 6 000 Kč</strong></p>
+      <a href="#prihlaseni" class="btn btn-lg" style="width:100%">Napiš mi svůj příběh →</a>
+      <p class="price-note">Příští kohorta startuje v <strong>září 2026</strong> · 3 placená místa · registrace od června.</p>
+    </div>
+
+    <div class="guarantee">
+      <div class="guarantee-shield">
+        <svg viewBox="0 0 80 90" xmlns="http://www.w3.org/2000/svg">
+          <path d="M40 4 L72 16 L72 46 Q72 70 40 86 Q8 70 8 46 L8 16 Z" fill="#a77b00" stroke="#8a6500" stroke-width="2"/>
+          <text x="40" y="46" text-anchor="middle" font-family="Inter" font-weight="900" font-size="20" fill="#fff">1.</text>
+          <text x="40" y="62" text-anchor="middle" font-family="Inter" font-weight="700" font-size="9" fill="#fff" letter-spacing="1">SETKÁNÍ</text>
+        </svg>
+      </div>
+      <h3>Záruka prvního setkání.</h3>
+      <p>Pokud po prvním setkání zjistíš, že tahle cesta není pro tebe, vracím ti peníze. Bez otázek, bez výmluv. Protože nechci ve spolupráci nikoho, kdo tam nemá být.</p>
+    </div>
+  </div>
+</section>
+
+<!-- APPLY -->
+<section class="apply-section" id="prihlaseni">
+  <div class="apply-inner">
+    <span class="section-eyebrow">Jak začneme</span>
+    <h2>Pošli mi <span class="serif-em">svůj příběh</span>.</h2>
+    <p style="font-size:17px;margin-top:14px;max-width:560px;margin-left:auto;margin-right:auto">Žádné formuláře, žádné prokliky. Stačí mi napsat email.</p>
+
+    <div class="apply-card">
+      <h3>Napiš mi pár vět o sobě</h3>
+      <p>Kde teď jsi. Co tě sem přivádí. Co bys chtěla, aby bylo jinak. <strong>Není to test.</strong> Je to první rozhovor.</p>
+      <p>Když mi to bude rezonovat, ozvu se a domluvíme si úvodních 30 minut zdarma. Bez prodejního skriptu, bez tlaku. Jen se potkáme a uvidíme, jestli to dává smysl pro nás obě.</p>
+      <a href="mailto:katerina@myheallo.info?subject=CEL%C3%81%20%C2%B7%20chci%20se%20s%20tebou%20potkat&body=Ahoj%20Kate%C5%99ino%2C%0A%0AKde%20te%C4%8F%20jsem%3A%0A%0ACo%20m%C4%9B%20k%20tob%C4%9B%20p%C5%99iv%C3%A1d%C3%AD%3A%0A%0ACo%20bych%20cht%C4%9Bla%2C%20aby%20bylo%20jinak%3A%0A%0AD%C4%9Bkuju%2C%20%0A" class="apply-email">→ katerina@myheallo.info</a>
+    </div>
+  </div>
+</section>
+
+<!-- SKUTEK -->
+<section class="skutek-section">
+  <div class="skutek-inner" style="max-width:880px">
+    <span class="section-eyebrow" style="background:rgba(167,123,0,.15);color:var(--brand-gold)">2 místa zdarma · tento měsíc</span>
+    <h2>Péče by neměla být<br><span class="serif-em">jen o penězích</span>.</h2>
+    <p style="font-size:17px;margin-top:14px;max-width:580px;margin-left:auto;margin-right:auto">Otevírám dvě cesty, jak vstoupit do CELÉ bez investice. Každá má svůj příběh… a svůj čas.</p>
+
+    <div class="skutek-grid">
+      <div class="skutek-card">
+        <span class="skutek-eyebrow">Roční stipendium · 1 místo</span>
+        <h3>Pro ženu, kterou drží peníze</h3>
+        <p>Jednou za rok otevírám jedno místo ženě, která si CELOU <strong>právě teď nemůže dovolit</strong>. Není to konkurz. Není to test toho nejtěžšího příběhu. Jen mi řekni, kde teď ekonomicky stojíš a co tě sem volá.</p>
+        <p style="font-style:italic;color:var(--ink);font-weight:500">Pokud si CELOU zaplatit můžeš… tahle cesta není pro tebe. Druhá ano.</p>
+        <a href="mailto:katerina@myheallo.info?subject=CEL%C3%81%20%C2%B7%20stipendium%20%C2%B7%20m%C5%AFj%20p%C5%99%C3%ADb%C4%9Bh&body=Ahoj%20Kate%C5%99ino%2C%0A%0Ahl%C3%A1s%C3%ADm%20se%20o%20ro%C4%8Dn%C3%AD%20stipendium%20pro%20CELOU.%0A%0AKde%20te%C4%8F%20ekonomicky%20stoj%C3%ADm%3A%0A%0ACo%20m%C4%9B%20sem%20vol%C3%A1%3A%0A%0APro%C4%8D%20pr%C3%A1v%C4%9B%20te%C4%8F%3A%0A%0AD%C4%9Bkuju%2C%0A" class="skutek-email">→ Napsat příběh</a>
+      </div>
+      <div class="skutek-card">
+        <span class="skutek-eyebrow">No-buy skutek · 1 místo navíc · jen červen 2026</span>
+        <h3>Pro ženu, která mi rezonuje</h3>
+        <p>V <strong>červnu 2026</strong> se účastním <strong>no-buy výzvy</strong>… měsíce, kdy nekupuju nic, co nepotřebuju, a místo toho investuju čas do toho, co má smysl. Jako svůj skutek otevírám ještě jedno místo zdarma.</p>
+        <p><strong>Tady se neptám na peníze.</strong> Ptám se na rezonanci. Cokoli mezi námi vznikne, vznikne.</p>
+        <p style="font-style:italic;color:var(--ink);font-weight:500">Pošli mi svůj příběh <strong>během června</strong>. Po konci června tahle nabídka mizí.</p>
+        <a href="mailto:katerina@myheallo.info?subject=CEL%C3%81%20%C2%B7%20no-buy%20skutek%20%C2%B7%20m%C5%AFj%20p%C5%99%C3%ADb%C4%9Bh&body=Ahoj%20Kate%C5%99ino%2C%0A%0Ahl%C3%A1s%C3%ADm%20se%20o%20no-buy%20m%C3%ADsto%20pro%20CELOU.%0A%0AKde%20te%C4%8F%20jsem%3A%0A%0AS%20%C4%8D%C3%ADm%20se%20pe%C5%A1u%3A%0A%0APro%C4%8D%20pr%C3%A1v%C4%9B%20te%C4%8F%3A%0A%0APro%C4%8D%20zrovna%20se%20mnou%3A%0A%0AD%C4%9Bkuju%2C%0A" class="skutek-email">→ Napsat příběh</a>
+      </div>
+    </div>
+
+    <p style="text-align:center;font-style:italic;color:var(--ink-soft);max-width:560px;margin:40px auto 0;font-size:15px;line-height:1.6">Pokud nevíš, do které cesty se přihlásit… napiš mi prostě svůj příběh. Sama tě zařadím tam, kam přirozeně patříš.</p>
+  </div>
+</section>
+
+<!-- NEWSLETTER · Flodesk -->
+<section class="newsletter-section">
+  <div class="newsletter-inner">
+    <span class="section-eyebrow">Dopis z HEALLO®</span>
+    <h2>Píšu ti<br><span class="serif-em">jednou za měsíc</span>.</h2>
+    <p class="newsletter-lead">Jednou za měsíc ti přijde krátký dopis. O tom, co se v HEALLO® odehrálo, co jsem se učila a co bylo v tichu krásné. Místo, kam se vrátit… bez prodeje, bez tlaku, jen text mezi námi.</p>
+    <div id="fd-form-6a196070d87a9ffadce51dae"></div>
+    <script>
+      window.fd('form', {
+        formId: '6a196070d87a9ffadce51dae',
+        containerEl: '#fd-form-6a196070d87a9ffadce51dae'
+      });
+    </script>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq-section">
+  <div class="wrap-narrow">
+    <div class="section-head">
+      <span class="section-eyebrow">Možná tě napadá</span>
+      <h2>Otázky, na které se ženy<br>ptají <span class="serif-em">nejčastěji</span>.</h2>
+    </div>
+    <div class="faq-container">
+      <details class="faq-item">
+        <summary>Kdy začneme spolupracovat?</summary>
+        <p>Pracuju v kohortách. <strong>Příští se otevírá v září 2026</strong> — beru do ní maximálně <strong>5 žen</strong> (3 placená místa + 2 zdarma jako skutek). Registrace na placená místa přijímám od června. Pokud se ozveš dřív, napiš mi svůj příběh teď a v červnu se ti ozvu. Nebo počkáš a napíšeš v červnu sama. Žádný správný způsob… jen ať tě tahle stránka neopustí jen tak.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Co když nevím, o čem mám mluvit?</summary>
+        <p>Nemusíš nic „připravovat". Stačí přijít s tím, co tě právě teď nese — únava, otázka, vzpomínka, prázdno. Já vedu rozhovor tak, aby se otevřelo to, co potřebuje být otevřené. Bez tvojí domácí přípravy.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Jak vypadá setkání?</summary>
+        <p>50 minut přes Zoom nebo Google Meet — co ti vyhovuje. Začneme tím, kde teď jsi… co se dělo za poslední dva týdny. Pak jdeme tam, kam to volá. Někdy je to konkrétní situace s jídlem. Někdy je to vzpomínka, která se vynořila. Někdy je to ticho. Vše, co se ozve, je relevantní.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Můžeme se zaměřit i na jídelníček a optimalizaci stravování?</summary>
+        <p>Ano. Jsem <strong>health coach</strong> a ve výživě se vyznám — pokud potřebuješ konkrétní pomoc s tím, <em>co jíst</em>, můžeme tam spolupráci zaměřit. Ale často se ukáže něco jiného: řada žen ke mně přichází s tím, že <strong>přesně vědí, co by měly jíst… a stejně to nedělají</strong>. Tehdy spolupráce není o jídelníčku. Je o tom, proč se ti to nedaří. Co potřebuješ ty, vyjasníme spolu v úvodním seznamovacím hovoru — a od toho se pak celá cesta odvíjí.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Co když potřebuji víc než 6 setkání?</summary>
+        <p>Po šestém setkání se obě podíváme zpátky — co se posunulo, co ještě volá. Pokud cítíš, že chceš pokračovat, nabízím navazující kratší balíčky (3 setkání) za snížených podmínek pro ženy, které prošly CELOU.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Pracuješ s ženami s diagnostikovanou poruchou příjmu potravy?</summary>
+        <p>Pokud aktuálně procházíš diagnostikovanou PPP, která potřebuje specializovanou klinickou péči (nutriční terapeut, psychiatr, psycholog se specializací), prosím napiš mi to v úvodním emailu. Buď tě nasměruji k vhodné péči, nebo se domluvíme na spolupráci paralelně s tvou klinickou péčí. Tvoje bezpečí je důležitější než moje místo v kalendáři.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Co když mezi setkáními něco potřebuji?</summary>
+        <p>Mezi setkáními máš přístup ke mně přes WhatsApp a email. Nejsem 24/7… ale jsem dosažitelná. Pokud se něco děje, napiš.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Můžu si rozdělit platbu na splátky?</summary>
+        <p>Ano. 3 splátky po 6 000 Kč. První při potvrzení spolupráce, druhá po druhém setkání, třetí po čtvrtém. Bez navýšení.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Proč nemůžu rovnou rezervovat termín?</summary>
+        <p>Protože tahle práce je o vztahu… a vztah se nezakládá tlačítkem v kalendáři. Chci nejdřív vědět, kdo jsi a proč přicházíš. Až pak má smysl si plánovat setkání.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Proč 18 000 Kč?</summary>
+        <p>Za 3 měsíce intenzivní 1:1 práce vychází jedno setkání na 3 000 Kč. K tomu mezi setkáními moje pozornost a dosažitelnost. A ten největší díl, který se nedá vyčíslit… roky vzdělání, výcviků, mojí vlastní práce, díky které vím, kde tě potkat. Tohle je cena za <em>celou Kateřinu</em>.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ALTERNATIVES -->
+<section class="alt-section">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="section-eyebrow" style="background:rgba(167,123,0,.15);color:var(--brand-gold)">Pokud CELÁ není pro tebe</span>
+      <h2>Existují jiné <span class="serif-em">cesty</span>.</h2>
+      <p style="font-size:17px;margin-top:14px;max-width:540px;margin-left:auto;margin-right:auto">Ne každá žena potřebuje 1:1. Ne každá teď. Tady jsou tři další dveře, které jsou ti otevřené.</p>
+    </div>
+
+    <div class="alt-grid">
+      <a href="https://myheallo.online" class="alt-card">
+        <span class="alt-arrow">↗</span>
+        <span class="alt-tag">Skupina · roční doprovod</span>
+        <h3>HEALLO® 365</h3>
+        <p>Pokud ti 1:1 přijde moc intenzivní, ve skupině max 10 žen najdeš ostatní, které jdou cestou s tebou. Rok doprovodu, somatika, intuitivní stravování. Start září 2026.</p>
+        <span class="alt-meta">12 měsíců · max 10 žen · 29 000 Kč</span>
+      </a>
+
+      <a href="https://myheallo.online" class="alt-card">
+        <span class="alt-arrow">↗</span>
+        <span class="alt-tag">Krátký kurz</span>
+        <h3>Jedno sousto</h3>
+        <p>Krok do brány, ne celý dům. Kratší cesta do HEALLO® práce, pokud chceš nejdřív vyzkoušet… ne se hned potopit. Pro ženu, která zvažuje, jestli je tahle cesta vůbec její.</p>
+        <span class="alt-meta">12 setkání · skupinová</span>
+      </a>
+
+      <a href="https://odkateriny.substack.com" class="alt-card">
+        <span class="alt-arrow">↗</span>
+        <span class="alt-tag">Substack</span>
+        <h3>Od Kateřiny</h3>
+        <p>Pokud teď nehledáš spolupráci, jen čtení… moje texty jsou každý týden tady. Začni tichem na stránce, ne závazkem. Píšu pravdivě a beze stylizace.</p>
+        <span class="alt-meta">každý týden · odkateriny.substack.com</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final-cta">
+  <div style="max-width:680px;margin:0 auto">
+    <span class="section-eyebrow">Tvé rozhodnutí</span>
+    <h2>Začni tam, kde jsi.<br>S tím, co máš.<br>Udělej to, <span class="serif-em">co můžeš</span>.</h2>
+    <p class="lead">Tahle stránka tě nemá přesvědčit. Pokud jsi došla až sem, něco tě sem dovedlo. Možná únava. Možná touha. Možná jen tušení, že tohle už nechceš zkoušet sama.</p>
+    <p class="lead" style="font-family:'Fraunces',serif;font-style:italic;font-size:22px;font-weight:500;margin-bottom:36px">Tělo to ví, ještě než to ví hlava.</p>
+    <a href="mailto:katerina@myheallo.info?subject=CEL%C3%81%20%C2%B7%20chci%20se%20s%20tebou%20potkat&body=Ahoj%20Kate%C5%99ino%2C%0A%0AKde%20te%C4%8F%20jsem%3A%0A%0ACo%20m%C4%9B%20k%20tob%C4%9B%20p%C5%99iv%C3%A1d%C3%AD%3A%0A%0ACo%20bych%20cht%C4%9Bla%2C%20aby%20bylo%20jinak%3A%0A%0AD%C4%9Bkuju%2C%20%0A" class="btn btn-lg">Napiš mi svůj příběh →</a>
+    <p class="micro">Bez tlaku · Bez prodejního skriptu · Jen rozhovor o tom, jestli je tahle cesta pro tebe</p>
+  </div>
+</section>
+
+<footer class="footer-pro">
+  <div class="footer-inner">
+    <div class="footer-col">
+      <p class="footer-brand">HEALLO<em>®</em></p>
+      <p class="footer-tagline"><strong>CELÁ</strong> — tříměsíční individuální spolupráce s Kateřinou.<br>6 setkání · 1:1 · pro ženu, která zkusila všechno.</p>
+    </div>
+    <div class="footer-col">
+      <p class="footer-label">Navigace</p>
+      <a href="#cena">Cena</a>
+      <a href="#prihlaseni">Jak začít</a>
+    </div>
+    <div class="footer-col">
+      <p class="footer-label">Spojení</p>
+      <a href="https://instagram.com/myheallo" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://odkateriny.substack.com" target="_blank" rel="noopener">Substack</a>
+      <a href="mailto:katerina@myheallo.info">katerina@myheallo.info</a>
+    </div>
+    <div class="footer-col">
+      <p class="footer-label">Právní</p>
+      <a href="https://www.myheallo.online/ochrana-osobnich-udaju/" target="_blank" rel="noopener">Ochrana údajů</a>
+      <a href="https://www.myheallo.online/obchodni-podminky-osvc/" target="_blank" rel="noopener">Obchodní podmínky</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 Kateřina · HEALLO®</p>
+    <div class="footer-legal">
+      <a href="mailto:katerina@myheallo.info">katerina@myheallo.info</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Cookie banner
+function acceptCookies(){
+  document.getElementById('cookieBanner').classList.add('hidden');
+  try{localStorage.setItem('cookies-accepted','1')}catch(e){}
+}
+(function(){
+  try{
+    if(localStorage.getItem('cookies-accepted')==='1'){
+      document.getElementById('cookieBanner').classList.add('hidden');
+    }
+  }catch(e){}
+})();
+
+// Sticky CTA
+(function(){
+  var bar=document.getElementById('stickyBar');
+  var hero=document.querySelector('.hero');
+  if(!bar||!hero)return;
+  window.addEventListener('scroll',function(){
+    var trigger=hero.offsetTop+hero.offsetHeight-100;
+    if(window.scrollY>trigger){bar.classList.add('visible')}
+    else{bar.classList.remove('visible')}
+  },{passive:true});
+})();
+
+// Lazy YouTube embed
+function loadVideo(el){
+  var id=el.getAttribute('data-video-id');
+  if(!id)return;
+  el.innerHTML='<iframe src="https://www.youtube-nocookie.com/embed/'+id+'?autoplay=1&rel=0&modestbranding=1" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen title="Kateřina o přejídání"></iframe>';
+}
+</script>
+
+</body></html>
